@@ -86,7 +86,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(260, 20, 281, 261))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("Dimensiones.PNG"))
+        self.label.setPixmap(QtGui.QPixmap("GUI/Dimensiones.PNG"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
@@ -212,4 +212,3 @@ class Ui_MainWindow(object):
         self.label_resultados_3.setText(_translate("MainWindow", "metros "))
         self.label_5.setText(_translate("MainWindow", "#Piezas en 1 metro:"))
         self.label_7.setText(_translate("MainWindow", "$ Costo/ pieza : "))
-

@@ -1,6 +1,11 @@
+#!/usr/bin/env python3
+#author : MIGUEL ANGEL GÓMEZ GORDILLO
+#email : mangel-95@hotmail.com
+#url : https://github.com/mangel2095
+
 import sys
 from PyQt5 import QtWidgets
-import mainwindow
+from GUI import mainwindow
 #Hasta acá se escribe siempre
 #Se crea la clase que va a heredar propiedades de la clase QMainWindow
 class MainWindowClass(QtWidgets.QMainWindow):
