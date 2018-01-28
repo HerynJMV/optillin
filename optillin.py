@@ -6,6 +6,7 @@
 import sys
 from PyQt5 import QtWidgets , QtGui
 from GUI import mainwindow
+from math import ceil
 #Hasta acá se escribe siempre
 #Se crea la clase que va a heredar propiedades de la clase QMainWindow
 class MainWindowClass(QtWidgets.QMainWindow):
@@ -45,6 +46,7 @@ class MainWindowClass(QtWidgets.QMainWindow):
                 unidad_metro = int(total_uni/metros)
                 try:
                     costo_unidad = (costoTela/unidad_metro)
+                    costo_unidad = ceil(costo_unidad) #round up
                 except:
                     costo_unidad = 'No Info'
 
