@@ -4,7 +4,7 @@
 #url : https://github.com/mangel2095
 
 import sys
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets , QtGui
 from GUI import mainwindow
 #Hasta acá se escribe siempre
 #Se crea la clase que va a heredar propiedades de la clase QMainWindow
@@ -15,11 +15,17 @@ class MainWindowClass(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.ui.pushButton_calcular.clicked.connect(self.calculo)
 
+        #Para permitir unicamente digitos en las entradas de los QLineEdit:
+        onlyNumber = QtGui.QDoubleValidator()
+        self.ui.lineEdit_ancho.setValidator(onlyNumber)
+        self.ui.lineEdit_a.setValidator(onlyNumber)
+        self.ui.lineEdit_b.setValidator(onlyNumber)
+        self.ui.lineEdit_costo.setValidator(onlyNumber)
+
     def calculo(self):
         # Get Data
-        print(self.ui.lineEdit_a.text())
         a = float(self.ui.lineEdit_a.text())/100
-        b = float(self.ui.lineEdit_a.text())/100
+        b = float(self.ui.lineEdit_b.text())/100
         ancho = float(self.ui.lineEdit_ancho.text())/100
         try:
             costoTela = float(self.ui.lineEdit_costo.text())
